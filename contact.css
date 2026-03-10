@@ -1,0 +1,254 @@
+/* === Contact & Booking Page Styles === */
+
+/* Page Header */
+.page-header {
+  padding: 140px 0 60px;
+  background: linear-gradient(135deg, var(--color-dark) 0%, #1a1a2e 100%);
+  text-align: center;
+}
+
+.page-header__title {
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.page-header__subtitle {
+  font-size: 18px;
+  color: var(--color-muted);
+}
+
+/* Contact Grid */
+.contact-section {
+  padding-top: 60px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+}
+
+.contact-grid__title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: var(--color-dark);
+}
+
+/* Booking Form */
+.booking-form-wrapper {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.booking-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.booking-form .form-group {
+  margin-bottom: 20px;
+}
+
+/* Success State */
+.booking-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.booking-success.visible {
+  display: block;
+}
+
+.booking-success__icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.booking-success h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: var(--color-success);
+}
+
+.booking-success p {
+  color: var(--color-grey);
+  font-size: 16px;
+}
+
+/* Info Panel */
+.info-panel {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+}
+
+.info-panel__content {
+  margin-bottom: 30px;
+}
+
+.info-panel__item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.info-panel__item:last-child {
+  border-bottom: none;
+}
+
+.info-panel__icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.info-panel__item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 4px;
+}
+
+.info-panel__item p {
+  font-size: 14px;
+  color: var(--color-grey);
+  line-height: 1.5;
+}
+
+.info-panel__map {
+  margin-top: 20px;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-light);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+}
+
+.map-placeholder span {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.map-placeholder p {
+  font-size: 14px;
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: var(--color-white);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item__question {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-dark);
+  background: none;
+  border: none;
+  transition: var(--transition);
+}
+
+.faq-item__question:hover {
+  color: var(--color-primary);
+}
+
+.faq-item__icon {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-primary);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.faq-item__question.active .faq-item__icon {
+  transform: rotate(45deg);
+}
+
+.faq-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item__answer.active {
+  max-height: 300px;
+  opacity: 1;
+  padding-bottom: 24px;
+}
+
+.faq-item__answer p {
+  color: var(--color-grey);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 120px 0 50px;
+  }
+
+  .booking-form-wrapper,
+  .info-panel {
+    padding: 24px;
+  }
+
+  .booking-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-item__question {
+    font-size: 16px;
+    padding: 20px 0;
+  }
+}
+

@@ -1,0 +1,265 @@
+/* === Parts Marketplace Page Styles === */
+
+/* Page Hero */
+.page-hero {
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, #1a1a2e 0%, var(--color-dark) 100%);
+  text-align: center;
+}
+
+.page-hero__title {
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.page-hero__subtitle {
+  font-size: 18px;
+  color: var(--color-muted);
+  margin-bottom: 32px;
+}
+
+.page-hero__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Filters Section */
+.parts-filters {
+  background-color: var(--color-white);
+  padding: 24px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.parts-filters .container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.parts-filters__search {
+  flex: 1;
+  min-width: 250px;
+}
+
+.parts-filters__dropdowns {
+  display: flex;
+  gap: 12px;
+}
+
+.parts-filters__dropdowns .form-select {
+  min-width: 160px;
+}
+
+/* Parts Grid */
+.parts-section {
+  padding-top: 50px;
+}
+
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.part-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.part-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.part-card__image {
+  width: 100%;
+  height: 180px;
+  background-color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.part-card__image-placeholder {
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.part-card__image-placeholder span {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.part-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.part-card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.part-card__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.part-card__compatible {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+}
+
+.part-card__badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.part-card__price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.part-card__seller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.part-card__seller-name {
+  font-size: 14px;
+  color: var(--color-grey);
+}
+
+.part-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.part-card__rating span {
+  color: var(--color-accent);
+}
+
+.part-card__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.part-card__actions .btn {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+/* Form Row */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* Modal */
+.modal__title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.modal__content {
+  padding: 30px;
+}
+
+/* No Results */
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+.no-results.visible {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .parts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .parts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .parts-filters .container {
+    flex-direction: column;
+  }
+
+  .parts-filters__search {
+    width: 100%;
+  }
+
+  .parts-filters__dropdowns {
+    width: 100%;
+  }
+
+  .parts-filters__dropdowns .form-select {
+    flex: 1;
+  }
+
+  .page-hero {
+    padding: 120px 0 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .parts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .part-card__actions {
+    flex-direction: column;
+  }
+}
+

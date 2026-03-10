@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoFix Home - DIY Car Repair Guides & AI Mechanic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <span>🔧</span> AutoFix Home
+      </a>
+      <div class="navbar__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar__nav" id="nav-menu">
+        <li><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
+        <li><a href="repairs.html" class="navbar__link">Repair Guides</a></li>
+        <li><a href="parts.html" class="navbar__link">Parts Store</a></li>
+        <li><a href="#ai-chat" class="navbar__link">AI Mechanic</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+        <li class="navbar__cart" id="cart-icon">
+          <span class="navbar__cart-icon">🛒</span>
+          <span class="navbar__cart-badge" id="cart-badge">0</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <h1 class="hero__title">Fix Your Car at Home. Save Money. Stay Safe.</h1>
+      <p class="hero__subtitle">Free step-by-step guides, AI-powered diagnosis, and affordable parts — everything a home mechanic needs.</p>
+      <div class="hero__buttons">
+        <a href="repairs.html" class="btn btn--primary">Browse Repair Guides</a>
+        <a href="#ai-chat" class="btn btn--outline">Chat with AI Mechanic</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair Category Cards -->
+  <section class="section categories fade-in">
+    <div class="container">
+      <h2 class="section__title">What Do You Need to Fix?</h2>
+      <div class="categories__grid">
+        <a href="repairs.html?category=oil" class="category-card" data-category="oil">
+          <div class="category-card__icon">🛢️</div>
+          <h3 class="category-card__title">Oil Change</h3>
+          <span class="badge badge--easy">Easy</span>
+          <span class="category-card__time">15 mins</span>
+          <span class="category-card__link">View Guide →</span>
+        </a>
+        <a href="repairs.html?category=brakes" class="category-card" data-category="brakes">
+          <div class="category-card__icon">🛑</div>
+          <h3 class="category-card__title">Brake Pads</h3>
+          <span class="badge badge--medium">Medium</span>
+          <span class="category-card__time">45 mins</span>
+          <span class="category-card__link">View Guide →</span>
+        </a>
+        <a href="repairs.html?category=battery" class="category-card" data-category="battery">
+          <div class="category-card__icon">🔋</div>
+          <h3 class="category-card__title">Battery</h3>
+          <span class="badge badge--easy">Easy</span>
+          <span class="category-card__time">10 mins</span>
+          <span class="category-card__link">View Guide →</span>
+        </a>
+        <a href="repairs.html?category=tires" class="category-card" data-category="tires">
+          <div class="category-card__icon">🍩</div>
+          <h3 class="category-card__title">Tire</h3>
+          <span class="badge badge--medium">Medium</span>
+          <span class="category-card__time">30 mins</span>
+          <span class="category-card__link">View Guide →</span>
+        </a>
+        <a href="repairs.html?category=air-filter" class="category-card" data-category="air-filter">
+          <div class="category-card__icon">💨</div>
+          <h3 class="category-card__title">Air Filter</h3>
+          <span class="badge badge--easy">Easy</span>
+          <span class="category-card__time">10 mins</span>
+          <span class="category-card__link">View Guide →</span>
+        </a>
+        <a href="repairs.html?category=spark-plugs" class="category-card" data-category="spark-plugs">
+          <div class="category-card__icon">⚡</div>
+          <h3 class="category-card__title">Spark Plugs</h3>
+          <span class="badge badge--medium">Medium</span>
+          <span class="category-card__time">60 mins</span>
+          <span class="category-card__link">View Guide →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Mechanic Chat Section -->
+  <section class="section ai-chat-section" id="ai-chat">
+    <div class="container">
+      <h2 class="section__title">AI Mechanic Chat</h2>
+      <div class="ai-chat">
+        <div class="ai-chat__info">
+          <h3>How the AI Works</h3>
+          <p>Our AI-powered mechanic uses advanced language models to help diagnose car problems and guide you through repairs.</p>
+          <ul class="ai-chat__features">
+            <li>🤖 <strong>Smart Diagnosis</strong> — Describe your symptoms and get expert advice</li>
+            <li>📝 <strong>Step-by-Step Guides</strong> — Clear instructions tailored to your vehicle</li>
+            <li>🔧 <strong>Tool Recommendations</strong> — Know what you need before you start</li>
+            <li>⚠️ <strong>Safety First</strong> — Built-in warnings for complex repairs</li>
+          </ul>
+          <div class="ai-chat__tip">
+            <span>💡 Pro Tip:</span> Be specific about your car's make, model, and year for the most accurate advice.
+          </div>
+        </div>
+        <div class="ai-chat__box">
+          <div class="ai-chat__messages" id="chat-messages">
+            <div class="chat-message chat-message--ai">
+              <div class="chat-message__avatar">🤖</div>
+              <div class="chat-message__content">
+                <p>Hi! I'm AutoFix AI, your virtual mechanic. Describe your car problem or symptom, and I'll help you diagnose and fix it!</p>
+                <span class="chat-message__time">Just now</span>
+              </div>
+            </div>
+          </div>
+          <div class="ai-chat__input-area">
+            <input type="text" class="form-input" id="chat-input" placeholder="Describe your car problem...">
+            <button class="btn btn--primary" id="chat-send">Send</button>
+          </div>
+          <div class="ai-chat__thinking" id="chat-thinking">
+            <span>🔧 AutoFix AI is thinking...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool Checklist Widget -->
+  <section class="section tools-section fade-in">
+    <div class="container">
+      <h2 class="section__title">Build Your Home Repair Toolkit</h2>
+      <p class="tools-section__desc">Check off the tools you have. Save your progress automatically!</p>
+      <div class="tools-checklist">
+        <div class="tools-checklist__column">
+          <h3 class="tools-checklist__title">Tools to Get</h3>
+          <ul class="tools-list" id="tools-list">
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="socket-set">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Socket Set</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="jack-stands">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Jack Stands (2+)</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="floor-jack">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Floor Jack</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="obd-scanner">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">OBD-II Scanner</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="torque-wrench">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Torque Wrench</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="screwdriver-set">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Screwdriver Set</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="wrench-set">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Wrench Set</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="pliers">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Pliers (Various Types)</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="oil-filter-wrench">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Oil Filter Wrench</span>
+              </label>
+            </li>
+            <li class="tool-item">
+              <label class="tool-checkbox">
+                <input type="checkbox" data-tool="work-light">
+                <span class="tool-checkbox__mark"></span>
+                <span class="tool-checkbox__text">Portable Work Light</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="tools-checklist__column">
+          <h3 class="tools-checklist__title">Got It ✅</h3>
+          <ul class="tools-list tools-list--checked" id="tools-got">
+            <!-- Checked tools will appear here -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <h3 class="footer__title">About AutoFix Home</h3>
+          <p class="footer__text">Your trusted partner for DIY car repairs. We provide free step-by-step guides, AI-powered diagnosis, and a marketplace for quality car parts.</p>
+        </div>
+        <div class="footer__links-section">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="repairs.html" class="footer__link">Repair Guides</a></li>
+            <li><a href="parts.html" class="footer__link">Parts Store</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h3 class="footer__title">Contact Info</h3>
+          <div class="footer__contact-item">
+            <span>📍</span> 123 Garage Street, Auto City
+          </div>
+          <div class="footer__contact-item">
+            <span>📞</span> (555) 123-4567
+          </div>
+          <div class="footer__contact-item">
+            <span>✉️</span> support@autofixhome.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        © 2024 AutoFix Home. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="back-to-top">↑</div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar__header">
+      <h3 class="cart-sidebar__title">Shopping Cart</h3>
+      <span class="cart-sidebar__close" id="cart-close">×</span>
+    </div>
+    <div class="cart-sidebar__items" id="cart-items">
+      <div class="cart-empty">Your cart is empty</div>
+    </div>
+    <div class="cart-sidebar__footer">
+      <div class="cart-sidebar__subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-sidebar__actions">
+        <button class="btn btn--primary" id="checkout-btn">Proceed to Checkout</button>
+        <button class="btn btn--outline" id="empty-cart-btn">Empty Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
+

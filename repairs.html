@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repair Guides - AutoFix Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="repairs.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <span>🔧</span> AutoFix Home
+      </a>
+      <div class="navbar__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar__nav" id="nav-menu">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="repairs.html" class="navbar__link navbar__link--active">Repair Guides</a></li>
+        <li><a href="parts.html" class="navbar__link">Parts Store</a></li>
+        <li><a href="index.html#ai-chat" class="navbar__link">AI Mechanic</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+        <li class="navbar__cart" id="cart-icon">
+          <span class="navbar__cart-icon">🛒</span>
+          <span class="navbar__cart-badge" id="cart-badge">0</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Safety Warning Banner -->
+  <div class="safety-banner" id="safety-banner">
+    <div class="safety-banner__content container">
+      <span class="safety-banner__icon">⚠️</span>
+      <p class="safety-banner__text">Always use jack stands — never work under a car supported only by a jack. Disconnect the battery before any electrical work. Wear gloves and eye protection.</p>
+      <button class="safety-banner__close" id="safety-close">×</button>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-header__title">Repair Guides</h1>
+      <p class="page-header__subtitle">Step-by-step instructions for common car repairs</p>
+    </div>
+  </section>
+
+  <!-- Search & Filter Bar -->
+  <div class="filter-bar" id="filter-bar">
+    <div class="container filter-bar__container">
+      <div class="filter-bar__search">
+        <input type="text" class="form-input" id="search-input" placeholder="Search a repair...">
+      </div>
+      <div class="filter-bar__pills">
+        <button class="filter-pill filter-pill--active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="engine">Engine</button>
+        <button class="filter-pill" data-filter="brakes">Brakes</button>
+        <button class="filter-pill" data-filter="electrical">Electrical</button>
+        <button class="filter-pill" data-filter="tires">Tires</button>
+        <button class="filter-pill" data-filter="fluids">Fluids</button>
+        <button class="filter-pill" data-filter="exterior">Exterior</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repair Guides Grid -->
+  <section class="section repairs-section">
+    <div class="container">
+      <div class="repairs-grid" id="repairs-grid">
+        <!-- Card 1: Oil Change -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">🛢️</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="repair-card__time">15 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Change Engine Oil</h3>
+          <p class="repair-card__desc">Learn how to drain old oil and replace the filter to keep your engine running smoothly.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-1">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-1">
+            <ol class="repair-steps">
+              <li>
+                <strong>Prepare the vehicle</strong> — Park on a level surface, apply parking brake, and let engine cool for 10 minutes.
+              </li>
+              <li>
+                <strong>Lift the front</strong> — Use a floor jack to raise the front of the vehicle and secure with jack stands.
+              </li>
+              <li>
+                <strong>Drain the oil</strong> — Locate the drain plug, place an oil catch pan underneath, and remove the plug.
+              </li>
+              <li>
+                <strong>Replace the filter</strong> — Use an oil filter wrench to remove the old filter, apply oil to the new filter gasket, and install.
+              </li>
+              <li>
+                <strong>Add new oil</strong> — Replace the drain plug, lower the vehicle, and add the recommended oil type and quantity.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 2: Brake Pads -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">🛑</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--medium">Medium</span>
+              <span class="repair-card__time">45 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Replace Brake Pads</h3>
+          <p class="repair-card__desc">Replace worn brake pads to maintain stopping power and prevent damage to rotors.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-2">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-2">
+            <ol class="repair-steps">
+              <li>
+                <strong>Loosen lug nuts</strong> — While wheel is on ground, loosen the lug nuts on the wheel you'll be working on.
+              </li>
+              <li>
+                <strong>Lift and secure</strong> — Lift the vehicle with a jack and place jack stands at the proper jack points.
+              </li>
+              <li>
+                <strong>Remove caliper</strong> — Remove caliper bolts and hang caliper with wire to avoid straining the brake line.
+              </li>
+              <li>
+                <strong>Remove old pads</strong> — Take out worn brake pads and note which direction the wear indicators face.
+              </li>
+              <li>
+                <strong>Install new pads</strong> — Apply brake grease to contact points, install new pads, reassemble caliper, and torque bolts.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 3: Jump Start -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">🔋</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="repair-card__time">10 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Jump-Start a Dead Battery</h3>
+          <p class="repair-card__desc">Get your car running again with these simple jump-starting steps using jumper cables.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-3">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-3">
+            <ol class="repair-steps">
+              <li>
+                <strong>Position vehicles</strong> — Park the donor vehicle facing the dead car, close enough for cables to reach.
+              </li>
+              <li>
+                <strong>Connect positive</strong> — Attach red clamp to positive (+) terminal on dead battery.
+              </li>
+              <li>
+                <strong>Connect negative</strong> — Attach red clamp to positive on donor battery, black clamp to negative on donor.
+              </li>
+              <li>
+                <strong>Ground connection</strong> — Connect black clamp to unpainted metal on the dead car's engine block.
+              </li>
+              <li>
+                <strong>Start and remove</strong> — Start donor car, wait 2 minutes, start dead car, then remove cables in reverse order.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 4: Air Filter -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">💨</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="repair-card__time">10 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Replace an Air Filter</h3>
+          <p class="repair-card__desc">Improve engine performance and fuel efficiency with a clean air filter.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-4">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-4">
+            <ol class="repair-steps">
+              <li>
+                <strong>Locate the filter housing</strong> — Find the air filter box under the hood, usually near the engine intake.
+              </li>
+              <li>
+                <strong>Open the housing</strong> — Unclip or unscrew the clips holding the filter cover in place.
+              </li>
+              <li>
+                <strong>Remove old filter</strong> — Take out the old air filter and note the direction of airflow indicated on it.
+              </li>
+              <li>
+                <strong>Check and clean</strong> — Wipe out any debris from the housing with a clean cloth.
+              </li>
+              <li>
+                <strong>Install new filter</strong> — Place new filter with correct airflow direction, secure cover and clips.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 5: Coolant -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">💧</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="repair-card__time">10 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Check and Top Up Coolant</h3>
+          <p class="repair-card__desc">Keep your engine at the right temperature by checking coolant levels regularly.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-5">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-5">
+            <ol class="repair-steps">
+              <li>
+                <strong>Cool down</strong> — Wait for the engine to cool completely (at least 30 minutes) before opening the reservoir.
+              </li>
+              <li>
+                <strong>Locate reservoir</strong> — Find the translucent coolant reservoir usually marked with "MAX" and "MIN" lines.
+              </li>
+              <li>
+                <strong>Check level</strong> — The coolant should be between the MIN and MAX lines when the engine is cold.
+              </li>
+              <li>
+                <strong>Add coolant</strong> — If low, slowly add the recommended coolant type until reaching the MAX line.
+              </li>
+              <li>
+                <strong>Check for leaks</strong> — Run engine and watch for any coolant leaks or steam from the system.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 6: Windshield Wipers -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">🌧️</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="repair-card__time">10 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Replace Windshield Wipers</h3>
+          <p class="repair-card__desc">Ensure clear visibility in all weather conditions with fresh wiper blades.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-6">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-6">
+            <ol class="repair-steps">
+              <li>
+                <strong>Lift the wiper arm</strong> — Lift the wiper arm away from the windshield until it stays in raised position.
+              </li>
+              <li>
+                <strong>Find release mechanism</strong> — Locate the small tab or button that releases the blade from the arm.
+              </li>
+              <li>
+                <strong>Remove old blade</strong> — Press the release tab and slide the old wiper blade off the arm.
+              </li>
+              <li>
+                <strong>Attach new blade</strong> — Slide the new blade onto the arm until it clicks into place.
+              </li>
+              <li>
+                <strong>Test</strong> — Lower the arm and test the wipers on low and high speeds for smooth operation.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 7: Flat Tire -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">🍩</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--medium">Medium</span>
+              <span class="repair-card__time">30 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Fix a Flat Tire</h3>
+          <p class="repair-card__desc">Learn to safely change a flat tire and get back on the road quickly.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-7">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-7">
+            <ol class="repair-steps">
+              <li>
+                <strong>Pull over safely</strong> — Move to a flat, stable area away from traffic and engage hazard lights.
+              </li>
+              <li>
+                <strong>Loosen lug nuts</strong> — While wheel is on ground, break lug nuts loose by turning counterclockwise.
+              </li>
+              <li>
+                <strong>Lift the vehicle</strong> — Place jack at correct jack point and lift until tire is off the ground.
+              </li>
+              <li>
+                <strong>Remove wheel</strong> — Remove lug nuts completely, take off flat tire, and place spare on hub.
+              </li>
+              <li>
+                <strong>Secure wheel</strong> — Hand-tighten lug nuts, lower vehicle, and fully torque in a star pattern.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 8: Spark Plugs -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">⚡</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--medium">Medium</span>
+              <span class="repair-card__time">60 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Replace Spark Plugs</h3>
+          <p class="repair-card__desc">Restore engine power and fuel efficiency with new spark plugs.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-8">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-8">
+            <ol class="repair-steps">
+              <li>
+                <strong>Access engine</strong> — Open hood, locate spark plug wires or ignition coil packs on engine.
+              </li>
+              <li>
+                <strong>Remove wires/coils</strong> — Carefully disconnect ignition coils or spark plug wires, noting their positions.
+              </li>
+              <li>
+                <strong>Remove old plugs</strong> — Use spark plug socket to remove old plugs, checking gap if required.
+              </li>
+              <li>
+                <strong>Gap new plugs</strong> — Set new spark plug gap according to manufacturer specifications using a gap tool.
+              </li>
+              <li>
+                <strong>Install and reassemble</strong> — Hand-start new plugs, torque to spec, reconnect coils/wires in correct order.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Card 9: Throttle Body -->
+        <article class="repair-card">
+          <div class="repair-card__header">
+            <span class="repair-card__icon">🔧</span>
+            <div class="repair-card__badges">
+              <span class="badge badge--hard">Hard</span>
+              <span class="repair-card__time">90 mins</span>
+            </div>
+          </div>
+          <h3 class="repair-card__title">How to Clean a Throttle Body</h3>
+          <p class="repair-card__desc">Improve idle quality and throttle response by cleaning carbon buildup.</p>
+          <button class="btn btn--outline repair-card__btn" data-target="guide-9">Read Guide</button>
+          <div class="repair-card__accordion" id="guide-9">
+            <ol class="repair-steps">
+              <li>
+                <strong>Disconnect battery</strong> — Remove negative battery terminal to prevent electrical issues.
+              </li>
+              <li>
+                <strong>Locate throttle body</strong> — Find the throttle body between air intake and intake manifold.
+              </li>
+              <li>
+                <strong>Remove air intake</strong> — Loosen clamps and remove air intake hose connected to throttle body.
+              </li>
+              <li>
+                <strong>Clean throttle plate</strong> — Spray throttle body cleaner on a brush and clean around the throttle plate.
+              </li>
+              <li>
+                <strong>Reassemble</strong> — Reinstall intake hose, reconnect battery, start engine and let it idle for 10 minutes.
+              </li>
+            </ol>
+          </div>
+        </article>
+      </div>
+      <div class="no-results" id="no-results">
+        <p>No guides found. Try a different search.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <h3 class="footer__title">About AutoFix Home</h3>
+          <p class="footer__text">Your trusted partner for DIY car repairs. We provide free step-by-step guides, AI-powered diagnosis, and a marketplace for quality car parts.</p>
+        </div>
+        <div class="footer__links-section">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="repairs.html" class="footer__link">Repair Guides</a></li>
+            <li><a href="parts.html" class="footer__link">Parts Store</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h3 class="footer__title">Contact Info</h3>
+          <div class="footer__contact-item">
+            <span>📍</span> 123 Garage Street, Auto City
+          </div>
+          <div class="footer__contact-item">
+            <span>📞</span> (555) 123-4567
+          </div>
+          <div class="footer__contact-item">
+            <span>✉️</span> support@autofixhome.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        © 2024 AutoFix Home. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="back-to-top">↑</div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar__header">
+      <h3 class="cart-sidebar__title">Shopping Cart</h3>
+      <span class="cart-sidebar__close" id="cart-close">×</span>
+    </div>
+    <div class="cart-sidebar__items" id="cart-items">
+      <div class="cart-empty">Your cart is empty</div>
+    </div>
+    <div class="cart-sidebar__footer">
+      <div class="cart-sidebar__subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-sidebar__actions">
+        <button class="btn btn--primary" id="checkout-btn">Proceed to Checkout</button>
+        <button class="btn btn--outline" id="empty-cart-btn">Empty Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

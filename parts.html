@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parts Marketplace - AutoFix Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="parts.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <span>🔧</span> AutoFix Home
+      </a>
+      <div class="navbar__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar__nav" id="nav-menu">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="repairs.html" class="navbar__link">Repair Guides</a></li>
+        <li><a href="parts.html" class="navbar__link navbar__link--active">Parts Store</a></li>
+        <li><a href="index.html#ai-chat" class="navbar__link">AI Mechanic</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+        <li class="navbar__cart" id="cart-icon">
+          <span class="navbar__cart-icon">🛒</span>
+          <span class="navbar__cart-badge" id="cart-badge">0</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero__title">Buy & Sell Car Parts</h1>
+      <p class="page-hero__subtitle">Find quality parts for your vehicle or sell your own</p>
+      <div class="page-hero__buttons">
+        <a href="#parts-grid" class="btn btn--primary">Browse Parts</a>
+        <button class="btn btn--outline" id="sell-part-btn">Sell a Part</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filters -->
+  <section class="parts-filters">
+    <div class="container">
+      <div class="parts-filters__search">
+        <input type="text" class="form-input" id="parts-search" placeholder="Search parts or compatible cars...">
+      </div>
+      <div class="parts-filters__dropdowns">
+        <select class="form-select" id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="engine">Engine</option>
+          <option value="brakes">Brakes</option>
+          <option value="suspension">Suspension</option>
+          <option value="electrical">Electrical</option>
+          <option value="body">Body</option>
+        </select>
+        <select class="form-select" id="condition-filter">
+          <option value="all">All Conditions</option>
+          <option value="new">New</option>
+          <option value="used">Used</option>
+          <option value="refurbished">Refurbished</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parts Grid -->
+  <section class="section parts-section" id="parts-grid">
+    <div class="container">
+      <div class="parts-grid" id="parts-grid-container">
+        <!-- Parts will be rendered dynamically by JavaScript -->
+      </div>
+      <div class="no-results" id="parts-no-results">
+        <p>No parts found. Try adjusting your search or filters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <h3 class="footer__title">About AutoFix Home</h3>
+          <p class="footer__text">Your trusted partner for DIY car repairs. We provide free step-by-step guides, AI-powered diagnosis, and a marketplace for quality car parts.</p>
+        </div>
+        <div class="footer__links-section">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="repairs.html" class="footer__link">Repair Guides</a></li>
+            <li><a href="parts.html" class="footer__link">Parts Store</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h3 class="footer__title">Contact Info</h3>
+          <div class="footer__contact-item">
+            <span>📍</span> 123 Garage Street, Auto City
+          </div>
+          <div class="footer__contact-item">
+            <span>📞</span> (555) 123-4567
+          </div>
+          <div class="footer__contact-item">
+            <span>✉️</span> support@autofixhome.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        © 2024 AutoFix Home. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="back-to-top">↑</div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar__header">
+      <h3 class="cart-sidebar__title">Shopping Cart</h3>
+      <span class="cart-sidebar__close" id="cart-close">×</span>
+    </div>
+    <div class="cart-sidebar__items" id="cart-items">
+      <div class="cart-empty">Your cart is empty</div>
+    </div>
+    <div class="cart-sidebar__footer">
+      <div class="cart-sidebar__subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-sidebar__actions">
+        <button class="btn btn--primary" id="checkout-btn">Proceed to Checkout</button>
+        <button class="btn btn--outline" id="empty-cart-btn">Empty Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sell Part Modal -->
+  <div class="modal" id="sell-modal">
+    <div class="modal__content">
+      <span class="modal__close" id="sell-modal-close">×</span>
+      <h2 class="modal__title">Sell Your Part</h2>
+      <form id="sell-form">
+        <div class="form-group">
+          <label class="form-label" for="part-name">Part Name *</label>
+          <input type="text" class="form-input" id="part-name" name="partName" placeholder="e.g., Brake Pad Set">
+          <span class="form-error">Please enter the part name</span>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="car-make">Car Make *</label>
+            <input type="text" class="form-input" id="car-make" name="carMake" placeholder="e.g., Toyota">
+            <span class="form-error">Please enter the car make</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="car-model">Car Model *</label>
+            <input type="text" class="form-input" id="car-model" name="carModel" placeholder="e.g., Camry">
+            <span class="form-error">Please enter the car model</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="year-range">Year Range *</label>
+          <input type="text" class="form-input" id="year-range" name="yearRange" placeholder="e.g., 2015-2022">
+          <span class="form-error">Please enter the year range</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="condition">Condition *</label>
+          <select class="form-select" id="condition" name="condition">
+            <option value="">Select condition</option>
+            <option value="new">New</option>
+            <option value="used">Used</option>
+            <option value="refurbished">Refurbished</option>
+          </select>
+          <span class="form-error">Please select the condition</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="price">Price ($) *</label>
+          <input type="number" class="form-input" id="price" name="price" placeholder="0.00" step="0.01" min="0">
+          <span class="form-error">Please enter a valid price</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="description">Description *</label>
+          <textarea class="form-textarea" id="description" name="description" placeholder="Describe the part condition, brand, and any other details..."></textarea>
+          <span class="form-error">Please enter a description</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="photo">Photo Upload</label>
+          <input type="file" class="form-input" id="photo" name="photo" accept="image/*">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="seller-name">Your Name *</label>
+          <input type="text" class="form-input" id="seller-name" name="sellerName" placeholder="Your name">
+          <span class="form-error">Please enter your name</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="seller-email">Your Email *</label>
+          <input type="email" class="form-input" id="seller-email" name="sellerEmail" placeholder="your@email.com">
+          <span class="form-error">Please enter a valid email</span>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Submit Listing</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

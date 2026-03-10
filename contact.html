@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Booking - AutoFix Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <span>🔧</span> AutoFix Home
+      </a>
+      <div class="navbar__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar__nav" id="nav-menu">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="repairs.html" class="navbar__link">Repair Guides</a></li>
+        <li><a href="parts.html" class="navbar__link">Parts Store</a></li>
+        <li><a href="index.html#ai-chat" class="navbar__link">AI Mechanic</a></li>
+        <li><a href="contact.html" class="navbar__link navbar__link--active">Contact</a></li>
+        <li class="navbar__cart" id="cart-icon">
+          <span class="navbar__cart-icon">🛒</span>
+          <span class="navbar__cart-badge" id="cart-badge">0</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-header__title">Contact & Booking</h1>
+      <p class="page-header__subtitle">Get in touch or book a professional consultation</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Booking Form -->
+        <div class="booking-form-wrapper">
+          <h2 class="contact-grid__title">Book a Consultation</h2>
+          <form id="booking-form" class="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="full-name">Full Name *</label>
+                <input type="text" class="form-input" id="full-name" name="fullName" placeholder="John Doe">
+                <span class="form-error">Please enter your full name</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email *</label>
+                <input type="email" class="form-input" id="email" name="email" placeholder="john@example.com">
+                <span class="form-error">Please enter a valid email</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone *</label>
+              <input type="tel" class="form-input" id="phone" name="phone" placeholder="(555) 123-4567">
+              <span class="form-error">Please enter a valid phone number (10+ digits)</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="car-make">Car Make *</label>
+                <input type="text" class="form-input" id="car-make" name="carMake" placeholder="e.g., Toyota">
+                <span class="form-error">Please enter your car make</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="car-model">Car Model *</label>
+                <input type="text" class="form-input" id="car-model" name="carModel" placeholder="e.g., Camry">
+                <span class="form-error">Please enter your car model</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="year">Year *</label>
+              <input type="text" class="form-input" id="year" name="year" placeholder="e.g., 2020">
+              <span class="form-error">Please enter the car year</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="problem">Problem Description *</label>
+              <textarea class="form-textarea" id="problem" name="problem" placeholder="Describe the issue you're experiencing with your vehicle..."></textarea>
+              <span class="form-error">Please describe the problem</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="preferred-date">Preferred Date *</label>
+                <input type="date" class="form-input" id="preferred-date" name="preferredDate">
+                <span class="form-error">Please select a date</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="preferred-time">Preferred Time *</label>
+                <select class="form-select" id="preferred-time" name="preferredTime">
+                  <option value="">Select time</option>
+                  <option value="morning">Morning (8am - 12pm)</option>
+                  <option value="afternoon">Afternoon (12pm - 5pm)</option>
+                  <option value="evening">Evening (5pm - 8pm)</option>
+                </select>
+                <span class="form-error">Please select a time</span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Submit Booking</button>
+          </form>
+          <div class="booking-success" id="booking-success">
+            <div class="booking-success__icon">✅</div>
+            <h3>Booking Confirmed!</h3>
+            <p>We'll contact you within 24 hours to confirm your appointment.</p>
+          </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel">
+          <h2 class="contact-grid__title">Contact Information</h2>
+          <div class="info-panel__content">
+            <div class="info-panel__item">
+              <span class="info-panel__icon">📍</span>
+              <div>
+                <h4>Address</h4>
+                <p>123 Garage Street, Auto City, AC 12345</p>
+              </div>
+            </div>
+            <div class="info-panel__item">
+              <span class="info-panel__icon">📞</span>
+              <div>
+                <h4>Phone</h4>
+                <p>(555) 123-4567</p>
+              </div>
+            </div>
+            <div class="info-panel__item">
+              <span class="info-panel__icon">✉️</span>
+              <div>
+                <h4>Email</h4>
+                <p>support@autofixhome.com</p>
+              </div>
+            </div>
+            <div class="info-panel__item">
+              <span class="info-panel__icon">🕐</span>
+              <div>
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+          <div class="info-panel__map">
+            <div class="map-placeholder">
+              <span>🗺️</span>
+              <p>Map — paste your Google Maps iframe here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section faq-section">
+    <div class="container">
+      <h2 class="section__title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Can I really fix my car at home with no experience?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Absolutely! Many common car repairs are straightforward and can be learned through our detailed guides. Start with simple tasks like changing air filters or wiper blades before moving to more complex repairs. Always prioritize safety and consult a professional for brake, steering, or suspension work.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>How does the AI Mechanic diagnose my car problem?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Our AI Mechanic uses advanced language models trained on automotive repair knowledge. You describe your symptoms (e.g., "car makes squeaking noise when braking"), and it provides likely causes and step-by-step DIY repair instructions. For best results, include your car's make, model, and year.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>Are the parts on the marketplace genuine and safe?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Our marketplace features both new and refurbished parts from verified sellers. All sellers are rated and reviewed by our community. We recommend checking seller ratings and part compatibility before purchasing. For critical safety parts like brakes, always ensure you're getting quality components.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>How do I post a part for sale?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Click "Sell a Part" on the Parts Store page, fill out the form with your part details including name, condition, price, and compatible vehicles. You can upload photos and your listing will be reviewed before going live on the marketplace.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>How do I book a professional if a repair is too complex?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Use our booking form to schedule a consultation with one of our professional mechanics. We'll discuss your situation, provide an estimate, and help you determine whether a DIY approach is feasible or if professional help is recommended.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            <span>What tools do I absolutely need to get started?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Start with basics: a socket set, wrench set, screwdriver set, and pliers. For safety, always have jack stands (never work under a car supported only by a jack). An OBD-II scanner is invaluable for diagnosing check engine lights. Check our tool checklist on the home page for a comprehensive list.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <h3 class="footer__title">About AutoFix Home</h3>
+          <p class="footer__text">Your trusted partner for DIY car repairs. We provide free step-by-step guides, AI-powered diagnosis, and a marketplace for quality car parts.</p>
+        </div>
+        <div class="footer__links-section">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="repairs.html" class="footer__link">Repair Guides</a></li>
+            <li><a href="parts.html" class="footer__link">Parts Store</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h3 class="footer__title">Contact Info</h3>
+          <div class="footer__contact-item">
+            <span>📍</span> 123 Garage Street, Auto City
+          </div>
+          <div class="footer__contact-item">
+            <span>📞</span> (555) 123-4567
+          </div>
+          <div class="footer__contact-item">
+            <span>✉️</span> support@autofixhome.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        © 2024 AutoFix Home. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="back-to-top">↑</div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar__header">
+      <h3 class="cart-sidebar__title">Shopping Cart</h3>
+      <span class="cart-sidebar__close" id="cart-close">×</span>
+    </div>
+    <div class="cart-sidebar__items" id="cart-items">
+      <div class="cart-empty">Your cart is empty</div>
+    </div>
+    <div class="cart-sidebar__footer">
+      <div class="cart-sidebar__subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-sidebar__actions">
+        <button class="btn btn--primary" id="checkout-btn">Proceed to Checkout</button>
+        <button class="btn btn--outline" id="empty-cart-btn">Empty Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
